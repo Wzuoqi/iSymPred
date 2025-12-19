@@ -9,7 +9,7 @@ import pytest
 import pandas as pd
 from pathlib import Path
 
-from i_sym_pred.predictors import S16Predictor
+from isympred.predictors import S16Predictor
 
 
 class TestS16Predictor:

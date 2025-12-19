@@ -11,7 +11,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="i_sym_pred",
+    name="isympred",
     version="0.1.0",
     author="iSymPred Development Team",
     description="Insect Symbiont Predictor - Predict symbiont functions from 16S or metagenomic data",
@@ -40,7 +40,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "isympred=i_sym_pred.cli:main",
+            "isympred=isympred.cli:main",
         ],
     },
 )

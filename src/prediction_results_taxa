@@ -1,0 +1,56 @@
+Symbiont_Taxon	Match_Level	Functional_Potential_Score	Total_Reads	Relative_Abundance_Pct	Function_Count	Mapped_Functions	Database_Hosts
+Enterobacter (sp.)	Genus	1617.51	4384	0.814	24	amino acid provision; antimicrobial activity; carbohydrate metabolism; carbohydrates enzymes; cellulose hydrolysis; ...(+19)	Diverse (Armadillidae/Bactrocera dorsalis...)
+Klebsiella (sp.)	Genus	1579.69	4340	0.806	23	B vitamin supplementation; amino acid provision; antimicrobial activity; carbohydrate metabolism; carbohydrates enzymes; ...(+18)	Diverse (Acrolepiopsis assectella/Aedes aegypti...)
+Enterococcus (sp.)	Genus	1116.28	880	0.163	19	B vitamin supplementation; amino acid provision; antimicrobial activity; carbohydrate metabolism; cellulose hydrolysis; ...(+14)	Diverse (Anticarsia gemmatalis/Bactrocera dorsalis...)
+Acinetobacter (sp.)	Genus	818.85	33272	6.177	13	antimicrobial activity; cellulose hydrolysis; detoxification enzymes; developmental modulation; fertility; ...(+8)	Diverse (Aedes aegypti/Aleurodicus rugioperculatus...)
+Wolbachia (sp.)	Genus	810.49	6054	1.124	25	B vitamin supplementation; antiviral activity; carbohydrate metabolism; cytoplasmic incompatibility; developmental modulation; ...(+20)	Diverse (Acalolepta fraudatrix/Acraea encedon...)
+Pseudomonas (sp.)	Genus	365.69	280	0.052	24	amino acid provision; antimicrobial activity; cellulose hydrolysis; chemical biosynthesis; detoxification enzymes; ...(+19)	Diverse (Aedes aegypti/Aleurodicus rugioperculatus...)
+Sphingobacterium (sp.)	Genus	212.45	4268	0.792	4	antimicrobial activity; chemical biosynthesis; pathogen resistance; plant defense modulation	Delia antiqua/Leptinotarsa decemlineata
+Microbacterium (sp.)	Genus	209.13	2595	0.482	4	cellulose hydrolysis; developmental modulation; pesticide metabolization; plastic degration	Diverse (Aedes aegypti/Anopheles gambiae...)
+Bacillus (sp.)	Genus	169.89	22	0.004	25	B vitamin supplementation; amino acid provision; antimicrobial activity; antiviral activity; carbohydrate metabolism; ...(+20)	Diverse (Acrobasis nuxvorella/Acrolepiopsis assectella...)
+Staphylococcus (sp.)	Genus	114.2	269	0.05	12	B vitamin supplementation; amino acid provision; antimicrobial activity; carbohydrate metabolism; detoxification enzymes; ...(+7)	Diverse (Acrobasis nuxvorella/Aedes aegypti...)
+Chryseobacterium (sp.)	Genus	113.67	5619	1.043	2	developmental modulation; other	Aedes aegypti/Anopheles gambiae/Georgecraigius atropalpus
+Stenotrophomonas (sp.)	Genus	95.38	1108	0.206	11	amino acid provision; antimicrobial activity; cellulose hydrolysis; chemical biosynthesis; detoxification enzymes; ...(+6)	Diverse (Alphitobius diaperinus/Blattella germanica...)
+Aeromonas (sp.)	Genus	89.08	558	0.104	6	carbohydrate metabolism; cellulose hydrolysis; developmental modulation; pectin hydrolysis; plastic degration; ...(+1)	Diverse (Aedes aegypti/Anopheles gambiae...)
+Stenotrophomonas maltophilia	Species	70.29	736	0.137	7	amino acid provision; antimicrobial activity; cellulose hydrolysis; chemical biosynthesis; pathogen resistance; ...(+2)	Diverse (Alphitobius diaperinus/Bombyx mori...)
+Klebsiella oxytoca	Species	66.19	701	0.13	9	carbohydrate metabolism; carbohydrates enzymes; cellulose hydrolysis; detoxification enzymes; growth regulation; ...(+4)	Diverse (Acrolepiopsis assectella/Bactrocera dorsalis...)
+Pantoea (sp.)	Genus	61.74	30	0.006	19	amino acid provision; antimicrobial activity; carbohydrate metabolism; cellulose hydrolysis; detoxification enzymes; ...(+14)	Diverse (Acrosternum arabicum/Anopheles sinensis...)
+Lactococcus lactis	Species	56.58	21570	4.005	8	carbohydrate metabolism; carbohydrates enzymes; growth regulation; lipase; nutrient provision; ...(+3)	Diverse (Bactrocera dorsalis/Ceratitis capitata...)
+Serratia marcescens	Species	46.94	135	0.025	12	antimicrobial activity; cellulose hydrolysis; chitin degradation; detoxification enzymes; fertility; ...(+7)	Diverse (Aedes aegypti/Bactrocera minax...)
+Streptomyces (sp.)	Genus	41.1	26	0.005	7	antimicrobial activity; cellulose hydrolysis; chemical biosynthesis; fungal farming; other; ...(+2)	Diverse (Acromyrmex coronatus/Acromyrmex octospinosus...)
+Comamonas (sp.)	Genus	34.45	6298	1.169	2	immune priming; other	Aedes aegypti/Bactrocera dorsalis/Oryctes rhinoceros
+Corynebacterium (sp.)	Genus	30.96	130	0.024	4	detoxification enzymes; lipase; natural enemy resistance; pesticide metabolization	Diverse (Aphidius colemani/Bombyx mori...)
+Leucobacter (sp.)	Genus	28.8	1324	0.246	2	antimicrobial activity; other	Aedes aegypti/Delia antiqua
+Lactobacillus (sp.)	Genus	23.28	22	0.004	11	amino acid provision; antimicrobial activity; carbohydrate metabolism; detoxification enzymes; fertility; ...(+6)	Diverse (Apis cerana/Apis mellifera...)
+Methylobacterium (sp.)	Genus	16.78	121	0.022	3	cellulose hydrolysis; nitrogen fixation; pathogen resistance	Atractomorpha sinensis/Lutzomyia evansi/Saturniidae
+Klebsiella michiganensis	Species	13.51	226	0.042	3	B vitamin supplementation; amino acid provision; temparature adaptation	Bactrocera dorsalis
+Acinetobacter soli	Species	11.82	816	0.151	1	pesticide metabolization	Spodoptera frugiperda
+Raoultella (sp.)	Genus	9.93	241	0.045	4	cellulose hydrolysis; immune priming; plant defense modulation; semiochemical biosynthesis	Diverse (Bactrocera tau/Leptinotarsa decemlineata...)
+Arsenophonus (sp.)	Genus	9.45	2	0.0	14	B vitamin supplementation; amino acid provision; developmental modulation; digestive enzymes; feeding habit alteration; ...(+9)	Diverse (Aphis craccivora/Aphis glycines...)
+Pseudomonas aeruginosa	Species	7.8	12	0.002	2	detoxification enzymes; plastic degration	Diverse (Alphitobius diaperinus/Pagiophloeus tsushimanus...)
+Enterococcus faecalis	Species	7.78	5	0.001	9	antimicrobial activity; detoxification enzymes; digestive enzymes; growth regulation; immune priming; ...(+4)	Diverse (Bactrocera dorsalis/Bactrocera minax...)
+Sphingomonas (sp.)	Genus	6.67	23	0.004	2	feeding habit alteration; pesticide metabolization	Aphis gossypii/Myzus persicae/Spodoptera frugiperda
+Pseudonocardia (sp.)	Genus	5.72	22	0.004	2	antimicrobial activity; chemical biosynthesis	Diverse (Acromyrmex/Mycetarotes parallelus...)
+Achromobacter (sp.)	Genus	5.3	108	0.02	2	other; plastic degration	Aedes aegypti/Tenebrio molitor
+Acinetobacter pittii	Species	5.17	2193	0.407	1	semiochemical biosynthesis	Blattella germanica
+Providencia (sp.)	Genus	5.17	52	0.01	4	developmental modulation; growth regulation; reproductive manipulation; semiochemical biosynthesis	Diverse (Anastrepha obliqua/Bactrocera dorsalis...)
+Agrobacterium (sp.)	Genus	4.91	201	0.037	1	growth regulation	Fragariocoptes setiger
+Tsukamurella (sp.)	Genus	4.84	3494	0.649	1	cellulose hydrolysis	Hoplothrips carpathicus
+Serratia liquefaciens	Species	4.7	14	0.003	3	cellulose hydrolysis; pathogen resistance; xylan hydrolysis	Bombyx mori/Dendroctonus valens
+Lampropedia (sp.)	Genus	4.59	1918	0.356	1	antimicrobial activity	Delia antiqua
+Streptococcus (sp.)	Genus	4.12	26	0.005	2	antimicrobial activity; digestive enzymes	Galleria mellonella/Homona magnanima/Reticulitermes flavipes
+Bradyrhizobium (sp.)	Genus	4.01	302	0.056	1	nitrogen fixation	Coccinella septempunctata
+Pseudomonas monteilii	Species	3.76	283	0.053	1	semiochemical biosynthesis	Blattella germanica
+Mammaliicoccus sciuri	Species	3.25	11	0.002	2	antimicrobial activity; fungal farming	Bombyx mori
+Staphylococcus epidermidis	Species	2.15	25	0.005	1	other	Oryctes rhinoceros
+Achromobacter xylosoxidans	Species	2.11	129	0.024	1	plastic degration	Tenebrio molitor
+Sphingobium (sp.)	Genus	2.1	224	0.042	1	other	Aedes aegypti
+Ochrobactrum (sp.)	Genus	1.94	11	0.002	3	antimicrobial activity; other; reproductive manipulation	Delia antiqua/Phlebotomus papatasi/Trichogramma chilonis
+Klebsiella variicola	Species	1.76	56	0.01	1	cellulose hydrolysis	Diatraea saccharalis
+Acinetobacter guillouiae	Species	1.57	36	0.007	1	antimicrobial activity	Delia antiqua
+Dysgonomonas (sp.)	Genus	1.44	15	0.003	2	digestive enzymes; plastic degration	Hermetia illucens/Tenebrio molitor
+Nocardioides (sp.)	Genus	1.3	148	0.027	1	detoxification enzymes	Hyles euphorbiae
+Mycobacterium (sp.)	Genus	1.27	24	0.004	1	antimicrobial activity	Nicrophorus concolor
+Psychrobacter (sp.)	Genus	1.2	9	0.002	1	temparature adaptation	Calliphoridae/Muscidae
+Stenotrophomonas rhizophila	Species	1.0	9	0.002	1	cellulose hydrolysis	Diatraea saccharalis
+Alcaligenes (sp.)	Genus	0.83	23	0.004	1	other	Aedes aegypti

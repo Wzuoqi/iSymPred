@@ -9,7 +9,7 @@ import pytest
 import pandas as pd
 from pathlib import Path
 
-from i_sym_pred.predictors import MetaPredictor
+from isympred.predictors import MetaPredictor
 
 
 class TestMetaPredictor:

@@ -6,7 +6,7 @@ CLI interface for iSymPred using Click framework.
 """
 
 import click
-from i_sym_pred import __version__
+from isympred import __version__
 
 
 @click.group()
