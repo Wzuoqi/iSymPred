@@ -6,6 +6,54 @@ import re
 import csv
 from io import StringIO
 
+def calculate_evidence_level(row):
+    """
+    计算证据等级 (1-5)，基于以下因素：
+    1. Record Type: Symbiont 类型获得更高分数
+    2. Genome ID: 有基因组数据显著提升等级
+    3. Journal: 高影响力期刊获得更高分数
+
+    评分规则：
+    - 基础分: 1分
+    - Record Type = "Symbiont": +1分
+    - 有 Genome ID: +2分
+    - 高质量期刊: +1分
+    """
+    level = 1  # 基础分
+
+    # 1. Record Type 评分
+    record_type = str(row.get('record_type', '')).strip().lower()
+    if record_type == 'symbiont':
+        level += 1
+
+    # 2. Genome ID 评分 (显著提升)
+    genome_id = str(row.get('genome_id', '')).strip()
+    if genome_id and genome_id.lower() not in ['none', 'nan', '', 'null', 'na']:
+        level += 2
+
+    # 3. Journal 评分 (高影响力期刊)
+    journal = str(row.get('journal', '')).strip().lower()
+
+    # 顶级期刊列表 (Nature系列, Science系列, Cell系列, PNAS等)
+    top_journals = [
+        'nature', 'science', 'cell', 'pnas',
+        'proceedings of the national academy of sciences',
+        'nature communications', 'nature microbiology',
+        'nature biotechnology', 'science advances',
+        'cell host & microbe', 'isme journal',
+        'microbiome', 'mbio', 'plos biology'
+    ]
+
+    # 检查是否为顶级期刊
+    if any(top_j in journal for top_j in top_journals):
+        level += 1
+
+    # 确保等级在 1-5 范围内
+    level = max(1, min(5, level))
+
+    return level
+
+
 def construct_qiime_taxonomy(row):
     """
     构建 QIIME 2 / SILVA 标准格式的 Taxonomy 字符串。
@@ -144,7 +192,9 @@ def format_symbiont_data(input_path, output_path):
         'host_species': ['Insect Species', 'Insect_Species', 'Host'],
         'function_tags': ['Function Tag', 'Function_Tag'],
         'function_desc': ['Function', 'Function Description', 'Description'],
-        'doi': ['doi', 'DOI', 'Doi']
+        'doi': ['doi', 'DOI', 'Doi'],
+        'genome_id': ['Genome ID', 'Genome_ID', 'GenomeID'],
+        'journal': ['Journal', 'journal']
     }
 
     rename_dict = {}
@@ -187,6 +237,12 @@ def format_symbiont_data(input_path, output_path):
     df = df[df['taxonomy'].notna()]
 
     # ==========================================
+    # 4.5 计算证据等级
+    # ==========================================
+    print("Calculating evidence levels...")
+    df['evidence_level'] = df.apply(calculate_evidence_level, axis=1)
+
+    # ==========================================
     # 5. Explode
     # ==========================================
     if 'function_tags' in df.columns:
@@ -201,6 +257,8 @@ def format_symbiont_data(input_path, output_path):
     if 'host_species' not in df.columns: df['host_species'] = 'General'
     if 'function_desc' not in df.columns: df['function_desc'] = ''
     if 'doi' not in df.columns: df['doi'] = ''
+    if 'genome_id' not in df.columns: df['genome_id'] = ''
+    if 'journal' not in df.columns: df['journal'] = ''
 
     for col in ['symbiont_phylum', 'symbiont_order', 'symbiont_genus', 'host_order', 'host_family']:
         if col not in df.columns: df[col] = '*'
@@ -215,7 +273,10 @@ def format_symbiont_data(input_path, output_path):
         'host_order',
         'host_family',
         'function_desc',
-        'doi'
+        'doi',
+        'genome_id',
+        'journal',
+        'evidence_level'
     ]
 
     output_rename = {
