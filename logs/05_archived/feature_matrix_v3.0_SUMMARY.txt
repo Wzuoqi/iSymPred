@@ -1,0 +1,151 @@
+================================================================================
+Feature Matrix Enhancement v3.0 - Quick Reference
+================================================================================
+
+Date: 2026-01-08
+Status: ✅ PRODUCTION READY
+Backward Compatibility: ✅ FULLY COMPATIBLE
+
+================================================================================
+WHAT'S NEW
+================================================================================
+
+Feature Count: 26 → 64 features (+146% increase)
+New Categories: 6 additional feature categories
+Testing: ✅ Single-row and multi-row tested
+Performance: <2s for 55 taxa
+
+================================================================================
+KEY FEATURES
+================================================================================
+
+1. Function Diversity (8 features)
+   - Shannon entropy, dominance, uniqueness
+   - Function category flags (nutrition, defense, reproduction, metabolism)
+
+2. Score Distribution (7 features)
+   - Percentiles, IQR, skewness, range
+   - Relative rankings
+
+3. Database Coverage (6 features)
+   - Record counts, host specificity
+   - Genome and journal quality flags
+
+4. Probability-Derived (5 features)
+   - Max/mean probabilities
+   - Confidence products
+
+5. Interaction Features (8 features)
+   - Abundance-score products
+   - Evidence-host synergy
+   - Symbiont Potential Index ⭐
+
+6. Taxonomic Context (4 features)
+   - Genus-level abundance
+   - Known symbiont flags
+
+================================================================================
+USAGE
+================================================================================
+
+Command:
+  python isympred/predictors/record_predictor.py \
+      -i input.tsv \
+      -d isympred/database/symbiont_record/record_db.tsv \
+      -o output.tsv \
+      --host "Host Species" \
+      --host-db isympred/database/host_taxonomy/insect_taxonomy.db
+
+Output Files:
+  1. output_functions.tsv         (unchanged)
+  2. output_match_records.tsv     (unchanged)
+  3. output_feature_matrix.tsv    (64 features) ⭐
+
+================================================================================
+MACHINE LEARNING WORKFLOW
+================================================================================
+
+1. Generate feature matrix (automatic)
+2. Manually annotate key symbionts (required)
+3. Train Random Forest model
+4. Analyze feature importance
+5. Predict on new samples
+
+Python Example:
+  import pandas as pd
+  from sklearn.ensemble import RandomForestClassifier
+  
+  features = pd.read_csv('output_feature_matrix.tsv', sep='\t')
+  X = features.drop('Symbiont_Taxon', axis=1)  # 64 features
+  
+  rf = RandomForestClassifier(n_estimators=100, class_weight='balanced')
+  rf.fit(X_train, y_train)
+
+================================================================================
+TOP 10 EXPECTED IMPORTANT FEATURES
+================================================================================
+
+1. Symbiont_Potential_Index      (composite metric)
+2. Relative_Abundance_Pct         (abundance)
+3. Weighted_Avg_Score             (quality)
+4. Max_Function_Probability       (confidence)
+5. Mean_Host_Match_Weight         (host specificity)
+6. Comprehensive_Quality_Score    (multi-dimensional)
+7. Abundance_Score_Product        (interaction)
+8. Max_Evidence_Level             (evidence quality)
+9. Function_Count                 (versatility)
+10. Is_Known_Symbiont_Genus       (prior knowledge)
+
+================================================================================
+DOCUMENTATION
+================================================================================
+
+Design:        logs/feature_matrix_enhancement_v3.0_DESIGN.md
+Changelog:     logs/feature_matrix_v3.0_CHANGELOG.md
+Usage Guide:   logs/feature_matrix_v3.0_USAGE.md
+Summary:       logs/feature_matrix_v3.0_UPDATE_SUMMARY.md
+Quick Ref:     logs/FEATURE_MATRIX_V3.0_SUMMARY.txt (this file)
+
+================================================================================
+TESTING RESULTS
+================================================================================
+
+✅ Multi-row test (55 taxa):     PASS
+✅ Single-row test (1 taxon):    PASS
+✅ Backward compatibility:       PASS (identical outputs)
+✅ Edge cases:                   PASS (no errors)
+✅ Performance:                  PASS (<2s for 55 taxa)
+
+================================================================================
+BACKWARD COMPATIBILITY
+================================================================================
+
+✅ Functions output:             IDENTICAL
+✅ Match records output:         IDENTICAL
+✅ Probability calculation:      UNCHANGED
+✅ Final_Score calculation:      UNCHANGED
+✅ Existing 26 features:         PRESERVED
+
+No migration required for existing users!
+
+================================================================================
+KNOWN LIMITATIONS
+================================================================================
+
+1. Scipy dependency (optional, has fallback)
+2. Hardcoded known symbiont list (10 genera)
+3. Hardcoded top journal list (5 journals)
+4. Keyword-based function classification
+5. Requires manual annotation for ML training
+
+================================================================================
+CONTACT & SUPPORT
+================================================================================
+
+Code:          isympred/predictors/record_predictor.py (lines 640-993)
+Test Data:     tests/data/test_data.tsv
+Examples:      tmp/test_enhanced_features_*.tsv
+
+================================================================================
+END OF QUICK REFERENCE
+================================================================================

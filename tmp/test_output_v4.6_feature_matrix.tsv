@@ -1,0 +1,108 @@
+Taxon	Function	Log_Abundance	Match_Level_Score	Host_Match_Weight_Max	Evidence_Level_Max	Adjusted_Score_Max	DB_Literature_Count	Shannon_Index	Rank_By_Abundance
+Acinetobacter (sp.)	plant defense modulation	0.8889	0.6	1.5	3	147.9	1	3.7589	1
+Lactococcus lactis	lipase	0.6979	1.0	1.2	2	100.5	1	3.7589	2
+Lactococcus lactis	carbohydrate metabolism	0.6979	1.0	1.2	2	100.5	1	3.7589	2
+Lactococcus lactis	nutrient provision	0.6979	1.0	1.1	2	84.5	1	3.7589	2
+Lactococcus lactis	growth regulation	0.6979	1.0	1.1	2	84.5	1	3.7589	2
+Lactococcus lactis	other	0.6979	1.0	1.1	2	84.5	1	3.7589	2
+Enterobacter (sp.)	plant defense modulation	0.2586	0.6	1.5	3	43.0	2	3.7589	12
+Sphingobacterium (sp.)	plant defense modulation	0.2534	0.6	1.5	3	42.2	1	3.7589	13
+Wolbachia (sp.)	pesticide metabolization	0.3272	0.6	1.2	3	34.8	1	3.7589	8
+Wolbachia (sp.)	cytoplasmic incompatibility	0.3272	0.6	1.2	3	34.8	1	3.7589	8
+Klebsiella (sp.)	detoxification enzymes	0.2985	0.6	1.1	4	32.1	1	3.7589	11
+Comamonas (sp.)	other	0.3363	0.6	1.1	2	24.4	1	3.7589	7
+Microbacterium (sp.)	cellulose hydrolysis	0.1708	0.6	1.5	2	23.0	1	3.7589	15
+Stenotrophomonas (sp.)	plant defense modulation	0.1284	0.6	1.5	3	21.4	2	3.7589	18
+Chryseobacterium (sp.)	other	0.3103	0.6	0.8	3	14.7	1	3.7589	10
+Acinetobacter pittii	semiochemical biosynthesis	0.1444	1.0	0.8	3	11.4	1	3.7589	16
+Tsukamurella (sp.)	cellulose hydrolysis	0.2171	0.6	0.8	2	8.3	1	3.7589	14
+Pseudomonas (sp.)	plant defense modulation	0.0441	0.6	1.5	3	7.2	1	3.7589	21
+Enterococcus (sp.)	detoxification enzymes	0.0661	0.6	1.1	4	7.2	1	3.7589	20
+Stenotrophomonas maltophilia	plastic degration	0.0414	1.0	1.1	3	6.1	2	3.7589	23
+Lampropedia (sp.)	antimicrobial activity	0.1323	0.6	0.8	2	5.1	1	3.7589	17
+Leucobacter (sp.)	other	0.0954	0.6	0.8	3	4.5	1	3.7589	19
+Aeromonas (sp.)	plastic degration	0.0428	0.6	1.1	3	3.9	1	3.7589	22
+Klebsiella oxytoca	plastic degration	0.028	1.0	1.1	2	3.4	1	3.7589	27
+Klebsiella oxytoca	detoxification enzymes	0.028	1.0	1.1	2	3.4	1	3.7589	27
+Stenotrophomonas maltophilia	reproductive manipulation	0.0414	1.0	0.8	3	3.2	1	3.7589	23
+Stenotrophomonas maltophilia	antimicrobial activity	0.0414	1.0	0.8	3	3.2	1	3.7589	23
+Raoultella (sp.)	plant defense modulation	0.019	0.6	1.5	3	3.1	1	3.7589	36
+Staphylococcus (sp.)	carbohydrate metabolism	0.0231	0.6	1.2	4	3.0	1	3.7589	32
+Staphylococcus (sp.)	amino acid provision	0.0231	0.6	1.2	4	3.0	1	3.7589	32
+Staphylococcus (sp.)	B vitamin supplementation	0.0231	0.6	1.2	4	3.0	1	3.7589	32
+Stenotrophomonas maltophilia	cellulose hydrolysis	0.0414	1.0	0.8	2	2.6	1	3.7589	23
+Klebsiella oxytoca	carbohydrate metabolism	0.028	1.0	0.8	3	2.2	1	3.7589	27
+Acinetobacter soli	pesticide metabolization	0.0262	1.0	0.8	3	2.1	1	3.7589	30
+Bradyrhizobium (sp.)	nitrogen fixation	0.0237	0.6	1.1	2	1.7	1	3.7589	31
+Pseudomonas monteilii	semiochemical biosynthesis	0.0206	1.0	0.8	3	1.7	1	3.7589	35
+Serratia marcescens	antimicrobial activity	0.0108	1.0	1.1	3	1.6	1	3.7589	47
+Klebsiella michiganensis	amino acid provision	0.0171	1.0	0.8	4	1.6	2	3.7589	42
+Klebsiella michiganensis	B vitamin supplementation	0.0171	1.0	0.8	4	1.6	1	3.7589	42
+Serratia marcescens	detoxification enzymes	0.0108	1.0	1.1	5	1.6	2	3.7589	47
+Achromobacter (sp.)	plastic degration	0.0187	0.6	1.1	2	1.3	1	3.7589	39
+Serratia marcescens	nutrient provision	0.0108	1.0	0.8	5	1.3	1	3.7589	47
+Serratia marcescens	plant defense modulation	0.0108	1.0	0.8	5	1.3	1	3.7589	47
+Raoultella (sp.)	cellulose hydrolysis	0.019	0.6	1.1	2	1.3	1	3.7589	36
+Achromobacter xylosoxidans	plastic degration	0.0103	1.0	1.1	2	1.2	1	3.7589	51
+Klebsiella michiganensis	temparature adaptation	0.0171	1.0	0.8	2	1.1	1	3.7589	42
+Achromobacter (sp.)	other	0.0187	0.6	0.8	3	0.9	1	3.7589	39
+Raoultella (sp.)	semiochemical biosynthesis	0.019	0.6	0.8	3	0.9	1	3.7589	36
+Sphingobium (sp.)	other	0.0177	0.6	0.8	3	0.9	1	3.7589	41
+Corynebacterium (sp.)	detoxification enzymes	0.0103	0.6	1.1	3	0.9	1	3.7589	51
+Agrobacterium (sp.)	growth regulation	0.0159	0.6	0.8	2	0.6	1	3.7589	45
+Methylobacterium (sp.)	nitrogen fixation	0.0097	0.6	0.8	2	0.4	1	3.7589	53
+Methylobacterium (sp.)	pathogen resistance	0.0097	0.6	0.8	2	0.4	1	3.7589	53
+Nocardioides (sp.)	detoxification enzymes	0.0118	0.6	0.8	2	0.4	1	3.7589	46
+Methylobacterium (sp.)	cellulose hydrolysis	0.0097	0.6	0.8	2	0.4	1	3.7589	53
+Klebsiella variicola	cellulose hydrolysis	0.0045	1.0	0.8	2	0.3	1	3.7589	56
+Staphylococcus epidermidis	other	0.0015	1.0	1.1	2	0.2	1	3.7589	85
+Providencia (sp.)	developmental modulation	0.0042	0.6	0.8	3	0.2	1	3.7589	57
+Providencia (sp.)	growth regulation	0.0042	0.6	0.8	2	0.2	1	3.7589	57
+Acinetobacter guillouiae	antimicrobial activity	0.0029	1.0	0.8	2	0.2	1	3.7589	61
+Pantoea (sp.)	detoxification enzymes	0.0024	0.6	1.1	4	0.2	2	3.7589	62
+Providencia (sp.)	semiochemical biosynthesis	0.0042	0.6	0.8	3	0.2	1	3.7589	57
+Bacillus (sp.)	detoxification enzymes	0.0018	0.6	1.1	4	0.2	1	3.7589	75
+Providencia (sp.)	reproductive manipulation	0.0042	0.6	0.8	2	0.2	1	3.7589	57
+Bacillus (sp.)	pesticide metabolization	0.0018	0.6	0.8	2	0.1	1	3.7589	75
+Alcaligenes (sp.)	other	0.0019	0.6	0.8	3	0.1	1	3.7589	71
+Lactobacillus (sp.)	antimicrobial activity	0.0018	0.6	0.8	2	0.1	1	3.7589	75
+Ochrobactrum (sp.)	other	0.0009	0.6	0.8	2	0.1	1	3.7589	92
+Dysgonomonas (sp.)	plastic degration	0.0012	0.6	1.1	2	0.1	1	3.7589	86
+Bacillus (sp.)	digestive enzymes	0.0018	0.6	1.1	2	0.1	1	3.7589	75
+Dysgonomonas (sp.)	digestive enzymes	0.0012	0.6	0.8	2	0.1	1	3.7589	86
+Lactobacillus (sp.)	amino acid provision	0.0018	0.6	0.8	2	0.1	1	3.7589	75
+Lactobacillus (sp.)	detoxification enzymes	0.0018	0.6	0.8	4	0.1	1	3.7589	75
+Lactobacillus (sp.)	carbohydrate metabolism	0.0018	0.6	0.8	3	0.1	1	3.7589	75
+Lactobacillus (sp.)	fertility	0.0018	0.6	0.8	2	0.1	1	3.7589	75
+Sphingomonas (sp.)	feeding habit alteration	0.0019	0.6	0.8	2	0.1	1	3.7589	71
+Sphingomonas (sp.)	pesticide metabolization	0.0019	0.6	0.8	2	0.1	2	3.7589	71
+Stenotrophomonas rhizophila	cellulose hydrolysis	0.0007	1.0	0.8	2	0.1	1	3.7589	95
+Pseudonocardia (sp.)	chemical biosynthesis	0.0018	0.6	0.8	2	0.1	1	3.7589	75
+Pantoea (sp.)	antimicrobial activity	0.0024	0.6	1.1	2	0.1	1	3.7589	62
+Serratia liquefaciens	cellulose hydrolysis	0.0011	1.0	0.8	3	0.1	1	3.7589	88
+Serratia liquefaciens	xylan hydrolysis	0.0011	1.0	0.8	3	0.1	1	3.7589	88
+Serratia liquefaciens	pathogen resistance	0.0011	1.0	1.1	3	0.1	2	3.7589	88
+Streptomyces (sp.)	cellulose hydrolysis	0.0021	0.6	0.8	5	0.1	1	3.7589	66
+Mycobacterium (sp.)	antimicrobial activity	0.0019	0.6	1.1	3	0.1	1	3.7589	71
+Ochrobactrum (sp.)	reproductive manipulation	0.0009	0.6	0.8	3	0.1	1	3.7589	92
+Pantoea (sp.)	plant biomass digestion	0.0024	0.6	1.2	2	0.1	1	3.7589	62
+Ochrobactrum (sp.)	antimicrobial activity	0.0009	0.6	0.8	2	0.1	1	3.7589	92
+Pantoea (sp.)	amino acid provision	0.0024	0.6	1.1	2	0.1	1	3.7589	62
+Pseudonocardia (sp.)	antimicrobial activity	0.0018	0.6	0.8	2	0.1	1	3.7589	75
+Pseudomonas aeruginosa	plastic degration	0.001	1.0	1.1	3	0.1	4	3.7589	91
+Streptomyces (sp.)	plant biomass digestion	0.0021	0.6	0.8	5	0.1	1	3.7589	66
+Streptomyces (sp.)	antimicrobial activity	0.0021	0.6	1.1	3	0.1	1	3.7589	66
+Streptococcus (sp.)	digestive enzymes	0.0021	0.6	0.8	3	0.1	1	3.7589	66
+Streptococcus (sp.)	antimicrobial activity	0.0021	0.6	0.8	2	0.1	2	3.7589	66
+Enterococcus faecalis	other	0.0004	1.0	1.1	2	0.0	1	3.7589	99
+Arsenophonus (sp.)	growth regulation	0.0002	0.6	0.8	2	0.0	1	3.7589	104
+Enterococcus faecalis	digestive enzymes	0.0004	1.0	1.1	2	0.0	1	3.7589	99
+Enterococcus faecalis	growth regulation	0.0004	1.0	0.8	2	0.0	1	3.7589	99
+Arsenophonus (sp.)	amino acid provision	0.0002	0.6	0.8	2	0.0	2	3.7589	104
+Enterococcus faecalis	plant biomass digestion	0.0004	1.0	1.1	2	0.0	1	3.7589	99
+Enterococcus faecalis	pesticide metabolization	0.0004	1.0	0.8	2	0.0	1	3.7589	99
+Arsenophonus (sp.)	pesticide metabolization	0.0002	0.6	0.8	5	0.0	1	3.7589	104
+Arsenophonus (sp.)	natural enemy resistance	0.0002	0.6	0.8	2	0.0	1	3.7589	104
+Psychrobacter (sp.)	temparature adaptation	0.0007	0.6	0.8	2	0.0	1	3.7589	95
+Mammaliicoccus sciuri	antimicrobial activity	0.0005	1.0	0.8	3	0.0	1	3.7589	97
+Mammaliicoccus sciuri	fungal farming	0.0005	1.0	0.8	3	0.0	1	3.7589	97

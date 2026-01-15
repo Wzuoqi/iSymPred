@@ -1,0 +1,6 @@
+Symbiont_Taxon	Predicted_Function	Adjusted_Score	Quality_Score	Base_Score	Host_Match_Weight	Host_Match_Level	Evidence_Level	Evidence_Weight	Match_Level	Relative_Abundance_Pct	DB_Host_Context	DB_Description	DB_Evidence
+Wolbachia pipientis	temparature adaptation	556.1	124.5	200.4	1.5	Species	3	1.15	Species	100.0	Drosophila melanogaster	Wolbachia pipientis increases the heat stress resistance of the host Drosophila melanogaster.	10.3390/ijms232416212
+Wolbachia pipientis	cytoplasmic incompatibility	502.0	121.0	200.4	1.3	Genus	4	1.3	Species	100.0	Drosophila simulans	Wolbachia pipientis causes cytoplasmic incompatibility in the host.	10.1093/gbe/evaa051
+Wolbachia pipientis	other	450.9	120.0	200.4	1.5	Species	2	1.0	Species	100.0	Drosophila melanogaster	Wolbachia pipientis influences octopamine metabolism in Drosophila females, which is dependent on th...	10.1134/S1022795419050028
+Wolbachia pipientis	other	450.9	120.0	200.4	1.5	Species	2	1.0	Species	100.0	Drosophila melanogaster	Wolbachia pipientis increases the recombination rate observed across two genomic intervals and incre...	10.3390/insects9010017
+Wolbachia pipientis	cytoplasmic incompatibility	417.7	116.5	200.4	1.3	Genus	3	1.15	Species	100.0	Drosophila simulans	Wolbachia pipientis induces Cytoplasmic Incompatibility (CI).	10.1073/pnas.89.7.2699

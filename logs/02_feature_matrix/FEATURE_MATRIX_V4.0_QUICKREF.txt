@@ -1,0 +1,191 @@
+================================================================================
+Feature Matrix v4.0 - 快速参考
+================================================================================
+
+版本: v4.0 (精简版，适用于小样本训练)
+日期: 2026-01-08
+状态: ✅ 生产就绪
+
+================================================================================
+核心改进
+================================================================================
+
+✅ 特征精简: 64 → 12 特征 (减少81%)
+✅ 输出粒度: Taxon → Taxon-Function配对
+✅ 训练数据: 55行 → 223行 (增加4倍)
+✅ 生物学意义: 每个特征都有明确解释
+✅ 小样本友好: 适合50-300个标注样本
+
+================================================================================
+12个核心特征
+================================================================================
+
+【丰度 (2)】
+1. Relative_Abundance_Pct  - 相对丰度 (%)
+2. Log_Abundance            - 对数丰度
+
+【分类 (2)】
+3. Match_Level_Score        - 分类置信度 (0.6/1.0)
+4. Is_Known_Symbiont        - 已知共生菌 (0/1)
+
+【宿主 (2)】
+5. Host_Match_Weight        - 宿主匹配权重 (0.8-1.5)
+6. Host_Match_Level         - 宿主匹配级别 (分类)
+
+【证据 (2)】
+7. Evidence_Level           - 证据等级 (1-5)
+8. Has_Genome_Data          - 基因组数据 (0/1)
+
+【预测 (2)】
+9. Function_Probability     - 功能概率 (0-1)
+10. Adjusted_Score          - 综合分数
+
+【上下文 (2)】
+11. Function_Support_Count  - 功能支持数
+12. Rank_By_Abundance       - 丰度排名
+
+================================================================================
+输出格式
+================================================================================
+
+文件: output_feature_matrix.tsv
+格式: Taxon-Function配对 (每行一个配对)
+列数: 14 (2个标识符 + 12个特征)
+
+示例:
+Taxon                Function                  Relative_Abundance_Pct  ...
+Wolbachia (sp.)     cytoplasmic incomp        1.124                   ...
+Buchnera aphidicola amino acid provision      5.2                     ...
+
+================================================================================
+使用流程
+================================================================================
+
+1. 生成特征矩阵
+   python isympred/predictors/record_predictor.py \
+       -i input.tsv -d database.tsv -o output.tsv --host "Host"
+
+2. 手动标注 (关键步骤！)
+   - 打开 output_feature_matrix.tsv
+   - 添加列 "Is_Key_Function" (0/1)
+   - 基于文献标注100-200个配对
+
+3. 训练模型
+   from sklearn.ensemble import RandomForestClassifier
+   rf = RandomForestClassifier(n_estimators=50, max_depth=5)
+   rf.fit(X_train, y_train)
+
+4. 预测关键功能
+   predictions = rf.predict_proba(X_test)[:, 1]
+
+================================================================================
+Python示例代码
+================================================================================
+
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+
+# 加载数据
+features = pd.read_csv('output_feature_matrix.tsv', sep='\t')
+
+# 准备特征 (需要one-hot编码Host_Match_Level)
+X = features[['Relative_Abundance_Pct', 'Log_Abundance',
+              'Match_Level_Score', 'Is_Known_Symbiont',
+              'Host_Match_Weight', 'Evidence_Level',
+              'Has_Genome_Data', 'Function_Probability',
+              'Adjusted_Score', 'Function_Support_Count',
+              'Rank_By_Abundance']]
+X = pd.get_dummies(X, columns=['Host_Match_Level'])
+
+# 标签 (需要手动标注)
+y = features['Is_Key_Function']  # 0/1
+
+# 训练
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+rf = RandomForestClassifier(n_estimators=50, max_depth=5,
+                            class_weight='balanced', random_state=42)
+rf.fit(X_train, y_train)
+
+# 预测
+predictions = rf.predict_proba(X)[:, 1]
+results = features[['Taxon', 'Function']].copy()
+results['Prediction'] = predictions
+results.sort_values('Prediction', ascending=False).head(20)
+
+================================================================================
+特征重要性 (预期)
+================================================================================
+
+Top 5 最重要特征:
+1. Function_Probability     ⭐⭐⭐⭐⭐
+2. Adjusted_Score           ⭐⭐⭐⭐⭐
+3. Host_Match_Weight        ⭐⭐⭐⭐⭐
+4. Relative_Abundance_Pct   ⭐⭐⭐⭐
+5. Is_Known_Symbiont        ⭐⭐⭐⭐
+
+================================================================================
+小样本训练建议
+================================================================================
+
+✅ 样本量: 100-200个标注的Taxon-Function配对
+✅ 模型参数: n_estimators=50, max_depth=5
+✅ 交叉验证: 5-fold CV
+✅ 类别平衡: class_weight='balanced'
+✅ 特征编码: Host_Match_Level需要one-hot编码
+
+================================================================================
+文档
+================================================================================
+
+详细设计: logs/feature_matrix_v4.0_REDESIGN.md
+使用指南: logs/feature_matrix_v4.0_USAGE.md (含完整代码)
+代码位置: isympred/predictors/record_predictor.py (640-789行)
+
+================================================================================
+测试结果
+================================================================================
+
+✅ 测试数据: tests/data/test_data.tsv
+✅ 输出: tmp/test_v4_features_feature_matrix.tsv
+✅ 配对数: 223行
+✅ 特征数: 12个
+✅ 状态: 正常运行
+
+================================================================================
+与v3.0对比
+================================================================================
+
+特性              v3.0          v4.0
+特征数            64            12
+输出粒度          Taxon         Taxon-Function
+训练样本          55行          223行
+适用场景          大样本        小样本
+过拟合风险        高            低
+生物学解释性      中等          高
+
+================================================================================
+关键优势
+================================================================================
+
+✅ 12个特征 - 适合小样本训练
+✅ 223行数据 - 比v3.0多4倍训练样本
+✅ 生物学意义明确 - 每个特征都可解释
+✅ Taxon-Function配对 - 更细粒度预测
+✅ 低过拟合风险 - 特征数量合理
+
+================================================================================
+下一步
+================================================================================
+
+1. 运行预测生成特征矩阵
+2. 手动标注100-200个Taxon-Function配对
+3. 训练随机森林模型
+4. 分析特征重要性
+5. 预测新样本的关键共生功能
+
+详细教程见: logs/feature_matrix_v4.0_USAGE.md
+
+================================================================================
+END
+================================================================================
